@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - TechFlow</title>
+    <meta name="description" content="Explore the powerful features of TechFlow workflow automation platform">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=496446708"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '496446708');
+    </script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">TechFlow</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link active" aria-current="page">Features</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-secondary" onclick="trackEvent('login_clicked')">Log In</button>
+                <button class="btn btn-primary" onclick="trackEvent('signup_clicked')">Get Started</button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="page-hero" role="banner">
+            <div class="container">
+                <h1>Powerful Features for Modern Teams</h1>
+                <p>Discover how TechFlow can transform your workflow with intelligent automation and seamless integrations.</p>
+            </div>
+        </section>
+
+        <!-- Feature Categories -->
+        <section class="feature-categories" role="region" aria-labelledby="categories-heading">
+            <div class="container">
+                <h2 id="categories-heading" class="section-title">Feature Categories</h2>
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="automation" onclick="switchCategory('automation')">
+                        <span class="tab-icon">🤖</span>
+                        <span class="tab-text">Automation</span>
+                    </button>
+                    <button class="category-tab" data-category="integrations" onclick="switchCategory('integrations')">
+                        <span class="tab-icon">🔗</span>
+                        <span class="tab-text">Integrations</span>
+                    </button>
+                    <button class="category-tab" data-category="analytics" onclick="switchCategory('analytics')">
+                        <span class="tab-icon">📊</span>
+                        <span class="tab-text">Analytics</span>
+                    </button>
+                    <button class="category-tab" data-category="collaboration" onclick="switchCategory('collaboration')">
+                        <span class="tab-icon">👥</span>
+                        <span class="tab-text">Collaboration</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Details -->
+        <section class="feature-details" role="region">
+            <div class="container">
+                <!-- Automation Features -->
+                <div class="feature-section active" id="automation-section">
+                    <div class="feature-grid">
+                        <div class="feature-item" onclick="trackEvent('feature_workflow_builder_clicked')">
+                            <div class="feature-icon">🔧</div>
+                            <h3>Visual Workflow Builder</h3>
+                            <p>Drag-and-drop interface to create complex workflows without coding.</p>
+                            <ul class="feature-list">
+                                <li>Intuitive drag-and-drop interface</li>
+                                <li>Pre-built templates</li>
+                                <li>Conditional logic</li>
+                                <li>Error handling</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_workflow_clicked')">Learn More</button>
+                        </div>
+                        
+                        <div class="feature-item" onclick="trackEvent('feature_ai_automation_clicked')">
+                            <div class="feature-icon">🧠</div>
+                            <h3>AI-Powered Automation</h3>
+                            <p>Machine learning algorithms that optimize your workflows automatically.</p>
+                            <ul class="feature-list">
+                                <li>Smart task routing</li>
+                                <li>Predictive analytics</li>
+                                <li>Auto-optimization</li>
+                                <li>Pattern recognition</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_ai_clicked')">Learn More</button>
+                        </div>
+                        
+                        <div class="feature-item" onclick="trackEvent('feature_scheduling_clicked')">
+                            <div class="feature-icon">⏰</div>
+                            <h3>Advanced Scheduling</h3>
+                            <p>Flexible scheduling options for recurring and one-time tasks.</p>
+                            <ul class="feature-list">
+                                <li>Cron expressions</li>
+                                <li>Calendar integration</li>
+                                <li>Time zone support</li>
+                                <li>Dependency management</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_scheduling_clicked')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrations Features -->
+                <div class="feature-section" id="integrations-section">
+                    <div class="feature-grid">
+                        <div class="feature-item" onclick="trackEvent('feature_api_integration_clicked')">
+                            <div class="feature-icon">🔌</div>
+                            <h3>100+ API Integrations</h3>
+                            <p>Connect with your favorite tools and services seamlessly.</p>
+                            <ul class="feature-list">
+                                <li>REST API support</li>
+                                <li>Webhook integration</li>
+                                <li>OAuth authentication</li>
+                                <li>Custom connectors</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_api_clicked')">Learn More</button>
+                        </div>
+                        
+                        <div class="feature-item" onclick="trackEvent('feature_popular_tools_clicked')">
+                            <div class="feature-icon">🛠️</div>
+                            <h3>Popular Tools Integration</h3>
+                            <p>Built-in integrations with Slack, Trello, GitHub, and more.</p>
+                            <ul class="feature-list">
+                                <li>Slack notifications</li>
+                                <li>Trello board sync</li>
+                                <li>GitHub automation</li>
+                                <li>Google Workspace</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_tools_clicked')">Learn More</button>
+                        </div>
+                        
+                        <div class="feature-item" onclick="trackEvent('feature_custom_integration_clicked')">
+                            <div class="feature-icon">⚙️</div>
+                            <h3>Custom Integration Builder</h3>
+                            <p>Create your own integrations with our visual builder.</p>
+                            <ul class="feature-list">
+                                <li>Visual API builder</li>
+                                <li>Data mapping</li>
+                                <li>Testing tools</li>
+                                <li>Version control</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_custom_clicked')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Features -->
+                <div class="feature-section" id="analytics-section">
+                    <div class="feature-grid">
+                        <div class="feature-item" onclick="trackEvent('feature_performance_analytics_clicked')">
+                            <div class="feature-icon">📈</div>
+                            <h3>Performance Analytics</h3>
+                            <p>Track and analyze your workflow performance in real-time.</p>
+                            <ul class="feature-list">
+                                <li>Real-time dashboards</li>
+                                <li>Performance metrics</li>
+                                <li>Bottleneck detection</li>
+                                <li>Trend analysis</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_performance_clicked')">Learn More</button>
+                        </div>
+                        
+                        <div class="feature-item" onclick="trackEvent('feature_user_analytics_clicked')">
+                            <div class="feature-icon">👤</div>
+                            <h3>User Behavior Analytics</h3>
+                            <p>Understand how your team uses workflows and optimize accordingly.</p>
+                            <ul class="feature-list">
+                                <li>Usage patterns</li>
+                                <li>User engagement</li>
+                                <li>Adoption metrics</li>
+                                <li>Training insights</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_behavior_clicked')">Learn More</button>
+                        </div>
+                        
+                        <div class="feature-item" onclick="trackEvent('feature_reporting_clicked')">
+                            <div class="feature-icon">📋</div>
+                            <h3>Advanced Reporting</h3>
+                            <p>Generate comprehensive reports and export data for analysis.</p>
+                            <ul class="feature-list">
+                                <li>Custom reports</li>
+                                <li>Data export</li>
+                                <li>Scheduled reports</li>
+                                <li>Visual charts</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_reporting_clicked')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collaboration Features -->
+                <div class="feature-section" id="collaboration-section">
+                    <div class="feature-grid">
+                        <div class="feature-item" onclick="trackEvent('feature_team_workflows_clicked')">
+                            <div class="feature-icon">🤝</div>
+                            <h3>Team Workflows</h3>
+                            <p>Collaborate with your team on shared workflows and processes.</p>
+                            <ul class="feature-list">
+                                <li>Shared workflows</li>
+                                <li>Role-based access</li>
+                                <li>Approval processes</li>
+                                <li>Team templates</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_team_clicked')">Learn More</button>
+                        </div>
+                        
+                        <div class="feature-item" onclick="trackEvent('feature_communication_clicked')">
+                            <div class="feature-icon">💬</div>
+                            <h3>Built-in Communication</h3>
+                            <p>Communicate with team members directly within workflows.</p>
+                            <ul class="feature-list">
+                                <li>In-app messaging</li>
+                                <li>Comment threads</li>
+                                <li>Mention system</li>
+                                <li>Notification center</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_communication_clicked')">Learn More</button>
+                        </div>
+                        
+                        <div class="feature-item" onclick="trackEvent('feature_version_control_clicked')">
+                            <div class="feature-icon">📝</div>
+                            <h3>Version Control</h3>
+                            <p>Track changes and collaborate on workflow improvements.</p>
+                            <ul class="feature-list">
+                                <li>Change history</li>
+                                <li>Branch workflows</li>
+                                <li>Merge conflicts</li>
+                                <li>Rollback options</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="trackEvent('learn_more_version_clicked')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo -->
+        <section class="interactive-demo" role="region" aria-labelledby="demo-heading">
+            <div class="container">
+                <h2 id="demo-heading" class="section-title">Try It Yourself</h2>
+                <div class="demo-container">
+                    <div class="demo-sidebar">
+                        <h3>Workflow Builder</h3>
+                        <div class="demo-steps">
+                            <div class="demo-step active" onclick="switchDemoStep(1)">
+                                <span class="step-number">1</span>
+                                <span class="step-text">Choose Trigger</span>
+                            </div>
+                            <div class="demo-step" onclick="switchDemoStep(2)">
+                                <span class="step-number">2</span>
+                                <span class="step-text">Add Actions</span>
+                            </div>
+                            <div class="demo-step" onclick="switchDemoStep(3)">
+                                <span class="step-number">3</span>
+                                <span class="step-text">Set Conditions</span>
+                            </div>
+                            <div class="demo-step" onclick="switchDemoStep(4)">
+                                <span class="step-number">4</span>
+                                <span class="step-text">Test & Deploy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-workspace">
+                        <div class="demo-canvas">
+                            <div class="demo-node trigger-node" onclick="trackEvent('demo_trigger_clicked')">
+                                <div class="node-icon">📧</div>
+                                <div class="node-text">New Email</div>
+                            </div>
+                            <div class="demo-connection"></div>
+                            <div class="demo-node action-node" onclick="trackEvent('demo_action_clicked')">
+                                <div class="node-icon">📝</div>
+                                <div class="node-text">Create Task</div>
+                            </div>
+                            <div class="demo-connection"></div>
+                            <div class="demo-node notification-node" onclick="trackEvent('demo_notification_clicked')">
+                                <div class="node-icon">🔔</div>
+                                <div class="node-text">Send Notification</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" role="region">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Experience These Features?</h2>
+                    <p>Start your free trial and see how TechFlow can transform your workflow.</p>
+                    <div class="cta-actions">
+                        <button class="btn btn-primary btn-large" onclick="trackEvent('features_cta_signup_clicked')">
+                            Start Free Trial
+                        </button>
+                        <button class="btn btn-outline btn-large" onclick="trackEvent('features_demo_request_clicked')">
+                            Request Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechFlow</h3>
+                    <p>Streamlining workflows for modern teams.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter" onclick="trackEvent('social_twitter_clicked')">𝕏</a>
+                        <a href="#" aria-label="LinkedIn" onclick="trackEvent('social_linkedin_clicked')">in</a>
+                        <a href="#" aria-label="GitHub" onclick="trackEvent('social_github_clicked')">⌥</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechFlow. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/features.js"></script>
+</body>
+</html> 

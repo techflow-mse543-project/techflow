@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechFlow</title>
+    <meta name="description" content="Get in touch with the TechFlow team for support, sales inquiries, or general questions">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=496446708"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '496446708');
+    </script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">TechFlow</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-secondary" onclick="trackEvent('login_clicked')">Log In</button>
+                <button class="btn btn-primary" onclick="trackEvent('signup_clicked')">Get Started</button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="page-hero" role="banner">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>Have questions about TechFlow? We're here to help. Reach out to our team for support, sales inquiries, or general questions.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section" role="region" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2 id="contact-heading">Send us a Message</h2>
+                        <form id="contact-form" class="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name" class="form-label">First Name *</label>
+                                    <input type="text" id="first-name" name="firstName" class="form-input" required onchange="trackFormField('first_name', this.value)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name" class="form-label">Last Name *</label>
+                                    <input type="text" id="last-name" name="lastName" class="form-input" required onchange="trackFormField('last_name', this.value)">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required onchange="trackFormField('email', this.value)">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" id="company" name="company" class="form-input" onchange="trackFormField('company', this.value)">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="inquiry-type" class="form-label">Inquiry Type *</label>
+                                <select id="inquiry-type" name="inquiryType" class="form-select" required onchange="trackFormField('inquiry_type', this.value)">
+                                    <option value="">Select an option</option>
+                                    <option value="general">General Question</option>
+                                    <option value="sales">Sales Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="demo">Request Demo</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" required onchange="trackFormField('message', this.value)" placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter" onchange="trackFormField('newsletter', this.checked)">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for updates and tips
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large" onclick="trackEvent('contact_form_submit_clicked')">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Other Ways to Reach Us</h2>
+                        
+                        <div class="contact-method" onclick="trackEvent('contact_email_clicked')">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>hello@techflow.com</p>
+                                <p>We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" onclick="trackEvent('contact_phone_clicked')">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+1 (555) 123-4567</p>
+                                <p>Mon-Fri, 9AM-6PM EST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" onclick="trackEvent('contact_chat_clicked')">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-details">
+                                <h3>Live Chat</h3>
+                                <p>Available on our website</p>
+                                <p>Get instant help from our team</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" onclick="trackEvent('contact_support_clicked')">
+                            <div class="contact-icon">🔧</div>
+                            <div class="contact-details">
+                                <h3>Support Center</h3>
+                                <p>help.techflow.com</p>
+                                <p>Browse our knowledge base</p>
+                            </div>
+                        </div>
+                        
+                        <div class="office-info">
+                            <h3>Office Location</h3>
+                            <p>123 Innovation Drive<br>
+                            San Francisco, CA 94105<br>
+                            United States</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" role="region" aria-labelledby="faq-heading">
+            <div class="container">
+                <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">
+                            <h3>How quickly do you respond to inquiries?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We typically respond to all inquiries within 24 hours during business days. For urgent technical support, we offer priority response times for Professional and Enterprise customers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">
+                            <h3>Do you offer custom integrations?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer custom integration development for Enterprise customers. Our team can work with your existing systems to create seamless workflows that fit your specific needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">
+                            <h3>Can I schedule a demo?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We offer personalized demos to show you how TechFlow can work for your specific use case. Just select "Request Demo" in the inquiry type above or contact our sales team.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">
+                            <h3>What kind of support do you provide?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide comprehensive support including email support for all plans, priority support for Professional customers, and 24/7 phone support for Enterprise customers. We also offer extensive documentation and training resources.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechFlow</h3>
+                    <p>Streamlining workflows for modern teams.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter" onclick="trackEvent('social_twitter_clicked')">𝕏</a>
+                        <a href="#" aria-label="LinkedIn" onclick="trackEvent('social_linkedin_clicked')">in</a>
+                        <a href="#" aria-label="GitHub" onclick="trackEvent('social_github_clicked')">⌥</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechFlow. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html> 

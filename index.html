@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow - Streamline Your Workflow</title>
+    <meta name="description" content="Discover powerful tools to streamline your workflow and boost productivity">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=496446708"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '496446708');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">TechFlow</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-secondary" onclick="trackEvent('login_clicked')">Log In</button>
+                <button class="btn btn-primary" onclick="trackEvent('signup_clicked')">Get Started</button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" role="banner">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Streamline Your <span class="highlight">Workflow</span> with Smart Automation
+                </h1>
+                <p class="hero-subtitle">
+                    Boost productivity by 300% with our intelligent workflow automation platform. 
+                    Connect your tools, automate repetitive tasks, and focus on what matters most.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" onclick="trackEvent('hero_cta_clicked')">
+                        Start Free Trial
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="trackEvent('demo_clicked')">
+                        Watch Demo
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">300%</span>
+                        <span class="stat-label">Productivity Boost</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="dashboard-header">
+                        <div class="dashboard-tabs">
+                            <span class="tab active">Analytics</span>
+                            <span class="tab">Workflows</span>
+                            <span class="tab">Settings</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="chart-container">
+                            <div class="chart-bar" style="height: 60%"></div>
+                            <div class="chart-bar" style="height: 80%"></div>
+                            <div class="chart-bar" style="height: 45%"></div>
+                            <div class="chart-bar" style="height: 90%"></div>
+                            <div class="chart-bar" style="height: 70%"></div>
+                        </div>
+                        <div class="metric-cards">
+                            <div class="metric-card">
+                                <span class="metric-value">2,847</span>
+                                <span class="metric-label">Tasks Completed</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value">94%</span>
+                                <span class="metric-label">Efficiency</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="features-preview" role="region" aria-labelledby="features-heading">
+        <div class="container">
+            <h2 id="features-heading" class="section-title">Why Choose TechFlow?</h2>
+            <div class="features-grid">
+                <div class="feature-card" onclick="trackEvent('feature_automation_clicked')">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Smart Automation</h3>
+                    <p>AI-powered workflows that learn and adapt to your team's patterns.</p>
+                </div>
+                <div class="feature-card" onclick="trackEvent('feature_integration_clicked')">
+                    <div class="feature-icon">🔗</div>
+                    <h3>100+ Integrations</h3>
+                    <p>Connect with your favorite tools and services seamlessly.</p>
+                </div>
+                <div class="feature-card" onclick="trackEvent('feature_analytics_clicked')">
+                    <div class="feature-icon">📊</div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Get deep insights into your workflow performance and bottlenecks.</p>
+                </div>
+                <div class="feature-card" onclick="trackEvent('feature_collaboration_clicked')">
+                    <div class="feature-icon">👥</div>
+                    <h3>Team Collaboration</h3>
+                    <p>Work together efficiently with real-time updates and shared workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" role="region">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Workflow?</h2>
+                <p>Join thousands of teams already using TechFlow to boost their productivity.</p>
+                <button class="btn btn-primary btn-large" onclick="trackEvent('cta_signup_clicked')">
+                    Get Started Free
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechFlow</h3>
+                    <p>Streamlining workflows for modern teams.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter" onclick="trackEvent('social_twitter_clicked')">𝕏</a>
+                        <a href="#" aria-label="LinkedIn" onclick="trackEvent('social_linkedin_clicked')">in</a>
+                        <a href="#" aria-label="GitHub" onclick="trackEvent('social_github_clicked')">⌥</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechFlow. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html> 

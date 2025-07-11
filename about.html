@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechFlow</title>
+    <meta name="description" content="Learn about TechFlow's mission to streamline workflows and empower teams with intelligent automation">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=496446708"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">TechFlow</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="about.html" class="nav-link active" aria-current="page">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-secondary" onclick="trackEvent('login_clicked')">Log In</button>
+                <button class="btn btn-primary" onclick="trackEvent('signup_clicked')">Get Started</button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="page-hero" role="banner">
+            <div class="container">
+                <h1>About TechFlow</h1>
+                <p>We're on a mission to make workflow automation accessible to every team, empowering organizations to focus on what matters most.</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section" role="region" aria-labelledby="mission-heading">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-content">
+                        <h2 id="mission-heading">Our Mission</h2>
+                        <p>At TechFlow, we believe that every team deserves the tools to work smarter, not harder. Our platform transforms complex workflows into simple, automated processes that save time and reduce errors.</p>
+                        <p>Founded in 2020, we've helped thousands of teams across the globe streamline their operations and boost productivity by up to 300%.</p>
+                        <div class="mission-stats">
+                            <div class="stat-item" onclick="trackEvent('about_stat_clicked', {stat: 'teams'})">
+                                <span class="stat-number">10,000+</span>
+                                <span class="stat-label">Teams Empowered</span>
+                            </div>
+                            <div class="stat-item" onclick="trackEvent('about_stat_clicked', {stat: 'workflows'})">
+                                <span class="stat-number">500K+</span>
+                                <span class="stat-label">Workflows Created</span>
+                            </div>
+                            <div class="stat-item" onclick="trackEvent('about_stat_clicked', {stat: 'time_saved'})">
+                                <span class="stat-number">2M+</span>
+                                <span class="stat-label">Hours Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission-visual">
+                        <div class="mission-image">
+                            <div class="image-placeholder">
+                                <span class="placeholder-icon">🏢</span>
+                                <span class="placeholder-text">Our Mission</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section" role="region" aria-labelledby="values-heading">
+            <div class="container">
+                <h2 id="values-heading" class="section-title">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card" onclick="trackEvent('about_value_clicked', {value: 'innovation'})">
+                        <div class="value-icon">🚀</div>
+                        <h3>Innovation</h3>
+                        <p>We constantly push the boundaries of what's possible in workflow automation, leveraging cutting-edge AI and machine learning.</p>
+                    </div>
+                    
+                    <div class="value-card" onclick="trackEvent('about_value_clicked', {value: 'simplicity'})">
+                        <div class="value-icon">✨</div>
+                        <h3>Simplicity</h3>
+                        <p>Complex problems deserve simple solutions. We design our platform to be intuitive and accessible to users of all technical levels.</p>
+                    </div>
+                    
+                    <div class="value-card" onclick="trackEvent('about_value_clicked', {value: 'reliability'})">
+                        <div class="value-icon">🛡️</div>
+                        <h3>Reliability</h3>
+                        <p>Your workflows are critical to your business. We ensure 99.9% uptime and robust error handling to keep your operations running smoothly.</p>
+                    </div>
+                    
+                    <div class="value-card" onclick="trackEvent('about_value_clicked', {value: 'collaboration'})">
+                        <div class="value-icon">🤝</div>
+                        <h3>Collaboration</h3>
+                        <p>We believe the best solutions come from working together. Our platform fosters team collaboration and shared success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section" role="region" aria-labelledby="team-heading">
+            <div class="container">
+                <h2 id="team-heading" class="section-title">Meet Our Team</h2>
+                <p class="section-subtitle">The passionate people behind TechFlow who are dedicated to transforming how teams work.</p>
+                
+                <div class="team-grid">
+                    <div class="team-member" onclick="trackEvent('about_team_member_clicked', {member: 'sarah'})">
+                        <div class="member-avatar">👩‍💼</div>
+                        <h3 class="member-name">Sarah Chen</h3>
+                        <p class="member-role">CEO & Co-Founder</p>
+                        <p class="member-bio">Former engineering leader at Google and Microsoft. Passionate about making technology accessible to everyone.</p>
+                    </div>
+                    
+                    <div class="team-member" onclick="trackEvent('about_team_member_clicked', {member: 'michael'})">
+                        <div class="member-avatar">👨‍💻</div>
+                        <h3 class="member-name">Michael Rodriguez</h3>
+                        <p class="member-role">CTO & Co-Founder</p>
+                        <p class="member-bio">Expert in distributed systems and AI. Led engineering teams at Amazon and Netflix before starting TechFlow.</p>
+                    </div>
+                    
+                    <div class="team-member" onclick="trackEvent('about_team_member_clicked', {member: 'emma'})">
+                        <div class="member-avatar">👩‍🎨</div>
+                        <h3 class="member-name">Emma Thompson</h3>
+                        <p class="member-role">Head of Design</p>
+                        <p class="member-bio">Award-winning UX designer with 10+ years experience creating intuitive user experiences for millions of users.</p>
+                    </div>
+                    
+                    <div class="team-member" onclick="trackEvent('about_team_member_clicked', {member: 'david'})">
+                        <div class="member-avatar">👨‍🔬</div>
+                        <h3 class="member-name">David Kim</h3>
+                        <p class="member-role">Head of Product</p>
+                        <p class="member-bio">Product strategist with deep expertise in B2B SaaS. Previously led product teams at Slack and Asana.</p>
+                    </div>
+                    
+                    <div class="team-member" onclick="trackEvent('about_team_member_clicked', {member: 'lisa'})">
+                        <div class="member-avatar">👩‍💼</div>
+                        <h3 class="member-name">Lisa Park</h3>
+                        <p class="member-role">VP of Customer Success</p>
+                        <p class="member-bio">Dedicated to ensuring every customer achieves their automation goals and sees measurable ROI.</p>
+                    </div>
+                    
+                    <div class="team-member" onclick="trackEvent('about_team_member_clicked', {member: 'james'})">
+                        <div class="member-avatar">👨‍💼</div>
+                        <h3 class="member-name">James Wilson</h3>
+                        <p class="member-role">VP of Sales</p>
+                        <p class="member-bio">Helping organizations understand how TechFlow can transform their workflows and boost productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section" role="region" aria-labelledby="story-heading">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <h2 id="story-heading">Our Story</h2>
+                        <p>TechFlow was born from a simple frustration: Sarah and Michael were tired of watching their teams waste countless hours on repetitive tasks that could easily be automated.</p>
+                        <p>In 2020, they decided to build a solution that would make workflow automation accessible to every team, regardless of their technical expertise. What started as a simple tool has grown into a comprehensive platform that powers workflows for thousands of organizations worldwide.</p>
+                        <p>Today, TechFlow continues to evolve, incorporating the latest advances in AI and machine learning to make automation even more intelligent and intuitive.</p>
+                        <button class="btn btn-outline" onclick="trackEvent('about_story_cta_clicked')">Read Our Blog</button>
+                    </div>
+                    <div class="story-visual">
+                        <div class="timeline">
+                            <div class="timeline-item" onclick="trackEvent('about_timeline_clicked', {year: '2020'})">
+                                <div class="timeline-marker">2020</div>
+                                <div class="timeline-content">
+                                    <h4>Founded</h4>
+                                    <p>TechFlow was founded with a mission to democratize workflow automation.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" onclick="trackEvent('about_timeline_clicked', {year: '2021'})">
+                                <div class="timeline-marker">2021</div>
+                                <div class="timeline-content">
+                                    <h4>First 1,000 Users</h4>
+                                    <p>Reached our first major milestone with 1,000 active teams.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" onclick="trackEvent('about_timeline_clicked', {year: '2022'})">
+                                <div class="timeline-marker">2022</div>
+                                <div class="timeline-content">
+                                    <h4>AI Integration</h4>
+                                    <p>Launched AI-powered workflow optimization and smart suggestions.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" onclick="trackEvent('about_timeline_clicked', {year: '2023'})">
+                                <div class="timeline-marker">2023</div>
+                                <div class="timeline-content">
+                                    <h4>Enterprise Launch</h4>
+                                    <p>Introduced enterprise-grade features and security.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" onclick="trackEvent('about_timeline_clicked', {year: '2024'})">
+                                <div class="timeline-marker">2024</div>
+                                <div class="timeline-content">
+                                    <h4>Global Expansion</h4>
+                                    <p>Serving 10,000+ teams across 50+ countries.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" role="region">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Join the TechFlow Community</h2>
+                    <p>Ready to transform your team's workflows? Start your free trial today and see the difference automation can make.</p>
+                    <div class="cta-actions">
+                        <button class="btn btn-primary btn-large" onclick="trackEvent('about_cta_signup_clicked')">
+                            Start Free Trial
+                        </button>
+                        <button class="btn btn-outline btn-large" onclick="trackEvent('about_cta_contact_clicked')">
+                            Contact Sales
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechFlow</h3>
+                    <p>Streamlining workflows for modern teams.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter" onclick="trackEvent('social_twitter_clicked')">𝕏</a>
+                        <a href="#" aria-label="LinkedIn" onclick="trackEvent('social_linkedin_clicked')">in</a>
+                        <a href="#" aria-label="GitHub" onclick="trackEvent('social_github_clicked')">⌥</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechFlow. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html> 
