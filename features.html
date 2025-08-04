@@ -41,7 +41,7 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="features.html" class="nav-link active" aria-current="page">Features</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="pricing.html" class="nav-link pricing-highlight">Pricing</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
@@ -96,13 +96,26 @@
         <!-- Feature Details -->
         <section class="feature-details" role="region">
             <div class="container">
+                <!-- Plan Availability -->
+                <div class="plan-availability">
+                    <div class="availability-note">
+                        <span class="info-icon">ℹ️</span>
+                        <p>Features are available across different plans. <a href="pricing.html" class="plan-link">View detailed pricing</a> to see which plan includes the features you need.</p>
+                    </div>
+                </div>
+                
                 <!-- Automation Features -->
                 <div class="feature-section active" id="automation-section">
                     <div class="feature-grid">
-                        <div class="feature-item" onclick="trackEvent('feature_workflow_builder_clicked')">
+                        <div class="feature-item" data-plan="all" onclick="trackEvent('feature_workflow_builder_clicked')">
                             <div class="feature-icon">🔧</div>
                             <h3>Visual Workflow Builder</h3>
                             <p>Drag-and-drop interface to create complex workflows without coding.</p>
+                            <div class="plan-indicator">
+                                <span class="plan-badge starter">Starter</span>
+                                <span class="plan-badge professional">Professional</span>
+                                <span class="plan-badge enterprise">Enterprise</span>
+                            </div>
                             <ul class="feature-list">
                                 <li>Intuitive drag-and-drop interface</li>
                                 <li>Pre-built templates</li>
@@ -112,10 +125,14 @@
                             <button class="btn btn-outline" onclick="trackEvent('learn_more_workflow_clicked')">Learn More</button>
                         </div>
                         
-                        <div class="feature-item" onclick="trackEvent('feature_ai_automation_clicked')">
+                        <div class="feature-item" data-plan="professional" onclick="trackEvent('feature_ai_automation_clicked')">
                             <div class="feature-icon">🧠</div>
                             <h3>AI-Powered Automation</h3>
                             <p>Machine learning algorithms that optimize your workflows automatically.</p>
+                            <div class="plan-indicator">
+                                <span class="plan-badge professional">Professional</span>
+                                <span class="plan-badge enterprise">Enterprise</span>
+                            </div>
                             <ul class="feature-list">
                                 <li>Smart task routing</li>
                                 <li>Predictive analytics</li>

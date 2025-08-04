@@ -1,5 +1,94 @@
 // Pricing page specific functionality
 
+// Plan filtering functionality
+function filterPlans() {
+    const filter = document.getElementById('team-size-filter');
+    const selectedSize = filter.value;
+    const table = document.querySelector('.comparison-table table');
+    
+    // Track filter usage
+    trackEvent('plan_filter_used', {
+        team_size: selectedSize
+    });
+    
+    // Get all columns (th and td elements)
+    const headers = table.querySelectorAll('th');
+    const rows = table.querySelectorAll('tr');
+    
+    // Define which columns to show based on team size
+    let columnsToShow = [];
+    
+    if (selectedSize === 'all') {
+        // Show all columns
+        columnsToShow = [0, 1, 2, 3]; // Feature column + 3 plan columns
+    } else if (selectedSize === '1') {
+        // Show Starter (1 person) and Professional (2-10 people) - both suitable for 1 person
+        columnsToShow = [0, 1, 2];
+    } else if (selectedSize === '2-10') {
+        // Show Professional (2-10 people) and Enterprise (10+ people) - both suitable for 2-10 people
+        columnsToShow = [0, 2, 3];
+    } else if (selectedSize === '10+') {
+        // Show only Enterprise (10+ people) - only suitable for 10+ people
+        columnsToShow = [0, 3];
+    }
+    
+    // Hide/show headers
+    headers.forEach((header, index) => {
+        if (columnsToShow.includes(index)) {
+            header.style.display = 'table-cell';
+        } else {
+            header.style.display = 'none';
+        }
+    });
+    
+    // Hide/show cells in each row
+    rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        cells.forEach((cell, index) => {
+            if (columnsToShow.includes(index)) {
+                cell.style.display = 'table-cell';
+            } else {
+                cell.style.display = 'none';
+            }
+        });
+    });
+    
+    // Add visual feedback
+    const comparisonTable = document.querySelector('.comparison-table');
+    comparisonTable.style.transform = 'scale(1.02)';
+    setTimeout(() => {
+        comparisonTable.style.transform = 'scale(1)';
+    }, 200);
+}
+
+// Scroll to specific plan functionality
+function scrollToPlan(planName) {
+    const planCard = document.querySelector(`.pricing-card:has(.pricing-name:contains("${planName}"))`) || 
+                     document.querySelector(`.pricing-card .pricing-name`);
+    
+    if (planCard) {
+        // Track recommendation click
+        trackEvent('plan_recommendation_clicked', {
+            plan_name: planName
+        });
+        
+        // Scroll to the plan card
+        planCard.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+        });
+        
+        // Add highlight effect
+        planCard.style.transform = 'scale(1.05)';
+        planCard.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.2)';
+        
+        setTimeout(() => {
+            planCard.style.transform = 'scale(1)';
+            planCard.style.boxShadow = '';
+        }, 1000);
+    }
+}
+
 // Billing toggle functionality
 function toggleBilling() {
     const toggle = document.getElementById('billing-toggle');

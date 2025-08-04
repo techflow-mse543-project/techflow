@@ -41,7 +41,7 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="features.html" class="nav-link">Features</a>
-                <a href="pricing.html" class="nav-link active" aria-current="page">Pricing</a>
+                <a href="pricing.html" class="nav-link pricing-highlight active" aria-current="page">Pricing</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
@@ -161,61 +161,116 @@
         <section class="feature-comparison" role="region" aria-labelledby="comparison-heading">
             <div class="container">
                 <h2 id="comparison-heading" class="section-title">Feature Comparison</h2>
+                
+                <!-- Plan Filter -->
+                <div class="plan-filter">
+                    <label for="team-size-filter">Filter by team size:</label>
+                    <select id="team-size-filter" onchange="filterPlans()">
+                        <option value="all">All Plans</option>
+                        <option value="1">1 person</option>
+                        <option value="2-10">2-10 people</option>
+                        <option value="10+">10+ people</option>
+                    </select>
+                </div>
+                
                 <div class="comparison-table">
                     <table>
                         <thead>
                             <tr>
-                                <th>Feature</th>
-                                <th>Starter</th>
-                                <th>Professional</th>
-                                <th>Enterprise</th>
+                                <th class="feature-col">Feature</th>
+                                <th class="plan-col starter">Starter</th>
+                                <th class="plan-col professional">Professional</th>
+                                <th class="plan-col enterprise">Enterprise</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Workflows</td>
-                                <td>5</td>
-                                <td>50</td>
-                                <td>Unlimited</td>
+                            <tr class="feature-row" data-team-size="1">
+                                <td class="feature-name">
+                                    <span class="feature-icon">📊</span>
+                                    Workflows
+                                </td>
+                                <td class="plan-value starter">5</td>
+                                <td class="plan-value professional">50</td>
+                                <td class="plan-value enterprise highlight">Unlimited</td>
                             </tr>
-                            <tr>
-                                <td>Automation Runs</td>
-                                <td>100/month</td>
-                                <td>1,000/month</td>
-                                <td>Unlimited</td>
+                            <tr class="feature-row" data-team-size="1">
+                                <td class="feature-name">
+                                    <span class="feature-icon">⚡</span>
+                                    Automation Runs
+                                </td>
+                                <td class="plan-value starter">100/month</td>
+                                <td class="plan-value professional">1,000/month</td>
+                                <td class="plan-value enterprise highlight">Unlimited</td>
                             </tr>
-                            <tr>
-                                <td>Integrations</td>
-                                <td>Basic (10)</td>
-                                <td>All (100+)</td>
-                                <td>All + Custom</td>
+                            <tr class="feature-row" data-team-size="all">
+                                <td class="feature-name">
+                                    <span class="feature-icon">🔗</span>
+                                    Integrations
+                                </td>
+                                <td class="plan-value starter">Basic (10)</td>
+                                <td class="plan-value professional">All (100+)</td>
+                                <td class="plan-value enterprise highlight">All + Custom</td>
                             </tr>
-                            <tr>
-                                <td>Team Members</td>
-                                <td>1</td>
-                                <td>10</td>
-                                <td>Unlimited</td>
+                            <tr class="feature-row" data-team-size="1">
+                                <td class="feature-name">
+                                    <span class="feature-icon">👥</span>
+                                    Team Members
+                                </td>
+                                <td class="plan-value starter">1</td>
+                                <td class="plan-value professional">10</td>
+                                <td class="plan-value enterprise highlight">Unlimited</td>
                             </tr>
-                            <tr>
-                                <td>Support</td>
-                                <td>Email</td>
-                                <td>Priority</td>
-                                <td>24/7 Phone</td>
+                            <tr class="feature-row" data-team-size="all">
+                                <td class="feature-name">
+                                    <span class="feature-icon">💬</span>
+                                    Support
+                                </td>
+                                <td class="plan-value starter">Email</td>
+                                <td class="plan-value professional">Priority</td>
+                                <td class="plan-value enterprise highlight">24/7 Phone</td>
                             </tr>
-                            <tr>
-                                <td>Analytics</td>
-                                <td>Basic</td>
-                                <td>Advanced</td>
-                                <td>Enterprise</td>
+                            <tr class="feature-row" data-team-size="2-10">
+                                <td class="feature-name">
+                                    <span class="feature-icon">📈</span>
+                                    Analytics
+                                </td>
+                                <td class="plan-value starter">Basic</td>
+                                <td class="plan-value professional highlight">Advanced</td>
+                                <td class="plan-value enterprise">Enterprise</td>
                             </tr>
-                            <tr>
-                                <td>Security</td>
-                                <td>Standard</td>
-                                <td>Enhanced</td>
-                                <td>Enterprise</td>
+                            <tr class="feature-row" data-team-size="10+">
+                                <td class="feature-name">
+                                    <span class="feature-icon">🔒</span>
+                                    Security
+                                </td>
+                                <td class="plan-value starter">Standard</td>
+                                <td class="plan-value professional">Enhanced</td>
+                                <td class="plan-value enterprise highlight">Enterprise</td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                
+                <!-- Quick Plan Selector -->
+                <div class="quick-plan-selector">
+                    <h3>Not sure which plan is right for you?</h3>
+                    <div class="plan-recommendations">
+                        <div class="recommendation-card" onclick="scrollToPlan('Starter')">
+                            <h4>For Individuals</h4>
+                            <p>Perfect for solo users getting started with automation</p>
+                            <span class="recommendation-plan">Starter Plan</span>
+                        </div>
+                        <div class="recommendation-card" onclick="scrollToPlan('Professional')">
+                            <h4>For Growing Teams</h4>
+                            <p>Ideal for teams that need advanced features and collaboration</p>
+                            <span class="recommendation-plan">Professional Plan</span>
+                        </div>
+                        <div class="recommendation-card" onclick="scrollToPlan('Enterprise')">
+                            <h4>For Large Organizations</h4>
+                            <p>Enterprise-grade features with dedicated support</p>
+                            <span class="recommendation-plan">Enterprise Plan</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
